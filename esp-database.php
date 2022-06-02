@@ -11,11 +11,8 @@
 <?php
   $servername = "localhost";
 
-  // REPLACE with your Database name
   $dbname = "esp_data";
-  // REPLACE with Database user
   $username = "esp__board";
-  // REPLACE with Database user password
   $password = "12345678";
 
   function insertReading($sensor, $location, $value1, $value2, $value3) {

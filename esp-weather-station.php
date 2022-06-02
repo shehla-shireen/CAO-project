@@ -8,6 +8,7 @@
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
 -->
+
 <?php
     include_once('esp-database.php');
     if ($_GET["readingsCount"]){
@@ -21,15 +22,15 @@
     else {
       $readings_count = 20;
     }
-
+    error_reporting(0);
     $last_reading = getLastReadings();
     $last_reading_temp = $last_reading["value1"];
     $last_reading_humi = $last_reading["value2"];
     $last_reading_time = $last_reading["reading_time"];
 
-    // Uncomment to set timezone to - 1 hour (you can change 1 to any number)
+    // Uncomment to set timezone to - 1 hour 
     //$last_reading_time = date("Y-m-d H:i:s", strtotime("$last_reading_time - 1 hours"));
-    // Uncomment to set timezone to + 7 hours (you can change 7 to any number)
+    // Uncomment to set timezone to + 7 hours 
     //$last_reading_time = date("Y-m-d H:i:s", strtotime("$last_reading_time + 7 hours"));
 
     $min_temp = minReading($readings_count, 'value1');
@@ -129,7 +130,7 @@
             $row_value2 = $row["value2"];
             $row_value3 = $row["value3"];
             $row_reading_time = $row["reading_time"];
-            // Uncomment to set timezone to - 1 hour (you can change 1 to any number)
+            // Uncomment to set timezone to - 1 hour 
             //$row_reading_time = date("Y-m-d H:i:s", strtotime("$row_reading_time - 1 hours"));
             // Uncomment to set timezone to + 7 hours (you can change 7 to any number)
             //$row_reading_time = date("Y-m-d H:i:s", strtotime("$row_reading_time + 7 hours"));

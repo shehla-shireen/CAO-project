@@ -10,18 +10,17 @@
   The above copyright notice and this permission notice shall be included in all
   copies or substantial portions of the Software.
 */
-
+error_reporting(0);
 $servername = "localhost";
 
-// REPLACE with your Database name
+
 $dbname = "esp_data";
-// REPLACE with Database user
+
 $username = "esp__board";
-// REPLACE with Database user password
+
 $password = "12345678";
 
-// Keep this API Key value to be compatible with the ESP32 code provided in the project page. 
-// If you change this value, the ESP32 sketch needs to match
+
 $api_key_value = "tPmAT5Ab3j7F9";
 
 $api_key= $sensor = $location = $value1 = $value2 = $value3 = "";
